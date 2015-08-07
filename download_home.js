@@ -57,7 +57,7 @@ client.get('statuses/home_timeline', params, function(error, tweets, response){
     var imgwgettext = '';
     for (var i = 0; i < tweets.length; i++) {
       var tweet = tweets[i];
-      imgwgettext += 'wget ' + tweet.user.profile_image_url + '\n';
+      imgwgettext += 'wget -x ' + tweet.user.profile_image_url + '\n';
     }
     fs.writeFile(imgwgetsh, imgwgettext);
   }
